@@ -1,4 +1,4 @@
-import { Box, BoxProps } from "@chakra-ui/react";
+import { Box, BoxProps, Image } from "@chakra-ui/react";
 import React from "react";
 
 export default function HomeBackground({
@@ -21,20 +21,16 @@ export default function HomeBackground({
       {...containerProps}
     >
       <Box
-        // backgroundColor="rgba(98, 98, 98, 0.09)"
-        // borderRadius="40px"
         border="1px solid rgba(255, 255, 255, 0.125)"
         borderRight={"none"}
         borderLeft={"none"}
         backdropFilter={"blur(8px) saturate(200%)"}
         w="full"
         px="5"
-        fontSize={"24px"}
         py="4"
-        textAlign={"center"}
         mx="auto"
       >
-        Concentro
+        <Image mx="auto" w="180px" src="/appLogo2.png" />
       </Box>
       <Box
         px="40"
@@ -42,9 +38,10 @@ export default function HomeBackground({
         bgSize="cover"
         bgPos="center"
         h={"full"}
+        backdropFilter={"blur(24px) saturate(200%)"}
         w="full"
         display="flex"
-        alignItems="center"
+        // alignItems="center"
         justifyContent="center"
         pos="relative"
         overflow={"auto"}

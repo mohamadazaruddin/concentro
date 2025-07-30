@@ -29,8 +29,8 @@ export default function Games() {
       image: "breakoutgamePreview.png",
     },
     {
-      name: "Tower Blocks",
-      description: "Smash those blocks",
+      name: "Tik Tac Toe",
+      description: "Mark your spot",
       slug: "tiktactoe",
       image: "tiktaktoePreview.png",
     },

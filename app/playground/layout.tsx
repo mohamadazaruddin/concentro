@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import React from "react";
 
 export default function Playgroundlayout({
@@ -9,7 +9,7 @@ export default function Playgroundlayout({
   return (
     <Box
       px="4"
-      pb="4"
+      pb="10"
       bgImage="url('/homeBg.png')"
       bgSize="cover"
       bgPos="center"
@@ -19,14 +19,7 @@ export default function Playgroundlayout({
       flexDirection="column"
       w="full"
     >
-      <Text
-        pb="2"
-        pt="4"
-        backdropFilter={"blur(16px) saturate(200%)"}
-        textAlign={"center"}
-      >
-        Concentro
-      </Text>
+      <Image my="2" mx="auto" w="180px" src="/appLogo2.png" />
       <Box
         flex="1"
         minH="0" // ensures proper shrinking if needed

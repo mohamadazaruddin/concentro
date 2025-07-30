@@ -17,8 +17,9 @@ export default function Home() {
         w={"full"}
         borderColor={"rgba(255, 255, 255, 0.125)"}
         flexDir="column"
-        justifyContent="center"
+        // justifyContent="center"
         alignItems={"center"}
+        pt="40"
         pos={"relative"}
       >
         <Circles top="100px" left="-6px" />
@@ -37,8 +38,8 @@ export default function Home() {
           textAlign={"center"}
           textShadow="0px 0px 8px #ffffff6e"
         >
-          Enhance Your Concentration <br />
-          Power
+          Enhance Your Concentration
+          <br /> Power
         </Heading>
         <Text
           textAlign={"center"}
@@ -46,10 +47,12 @@ export default function Home() {
           fontSize={"18px"}
           color={"#fff"}
           fontWeight={"medium"}
+          maxW={"80%"}
           textShadow="0px 0px 8px #ffffff6e"
         >
-          all games in one place one tool for all the brain releated game to
-          play <br /> and increase concentration power
+          Experience the ultimate collection of brain games, all in one place.
+          Play engaging challenges designed to boost your concentration and
+          sharpen your mind.
         </Text>
         <Button
           px="20"
@@ -58,6 +61,8 @@ export default function Home() {
           fontWeight={"semibold"}
           mt="10"
           rounded="full"
+          w={"fit-content"}
+          mx="auto"
           onClick={() => router.push("/games")}
         >
           Get Started
