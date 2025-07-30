@@ -1,14 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import {
-  Box,
-  Button,
-  CssKeyframes,
-  Flex,
-  Heading,
-  Image,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { LuArrowLeft } from "react-icons/lu";
 import { useRouter } from "next/navigation";
 
@@ -64,7 +56,7 @@ export default function MemoryGame() {
   const handleCardClick = (idx: number) => {
     if (disableDeck) return;
     if (cards[idx].isFlipped || cards[idx].isMatched) return;
-    let updatedCards = [...cards];
+    const updatedCards = [...cards];
     updatedCards[idx].isFlipped = true;
     setCards(updatedCards);
 
@@ -82,7 +74,7 @@ export default function MemoryGame() {
       const secondCard = cards[secondCardIdx];
       if (firstCard.img === secondCard.img) {
         setTimeout(() => {
-          let updatedCards = [...cards];
+          const updatedCards = [...cards];
           updatedCards[firstCardIdx].isMatched = true;
           updatedCards[secondCardIdx].isMatched = true;
           setCards(updatedCards);
@@ -93,7 +85,7 @@ export default function MemoryGame() {
         }, 400);
       } else {
         setTimeout(() => {
-          let updatedCards = [...cards];
+          const updatedCards = [...cards];
           updatedCards[firstCardIdx].isFlipped = false;
           updatedCards[secondCardIdx].isFlipped = false;
           setCards(updatedCards);

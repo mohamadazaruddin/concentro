@@ -2,7 +2,7 @@
 import Circles from "@/components/Circles";
 import HomeBackground from "@/components/HomeBackground";
 import Lines from "@/components/Lines";
-import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { Button, Flex, Heading, Text } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 
 export default function Home() {

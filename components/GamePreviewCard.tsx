@@ -2,13 +2,18 @@
 import { Box, Heading, Image, Text } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 import React from "react";
-
+type CardPropsType = {
+  name: string;
+  slug: string;
+  description: string;
+  image: string;
+};
 export default function GamePreviewCard({
   name,
   slug,
   description,
   image,
-}: any) {
+}: CardPropsType) {
   const router = useRouter();
   return (
     <Box
@@ -27,6 +32,7 @@ export default function GamePreviewCard({
       onClick={() => router.push(`/playground/${slug}`)}
     >
       <Image
+        alt="Game Preview"
         height="180px"
         pos={"relative"}
         zIndex={6}

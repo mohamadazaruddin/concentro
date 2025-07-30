@@ -2,7 +2,12 @@ import GamePreviewCard from "@/components/GamePreviewCard";
 import HomeBackground from "@/components/HomeBackground";
 import { Box, Flex, Heading } from "@chakra-ui/react";
 import React from "react";
-
+type CardPropsType = {
+  name: string;
+  slug: string;
+  description: string;
+  image: string;
+};
 export default function Games() {
   const games = [
     {
@@ -58,7 +63,7 @@ export default function Games() {
           gap="10"
           flexWrap={"wrap"}
         >
-          {games.map((item: any, i: number) => (
+          {games.map((item: CardPropsType, i: number) => (
             <GamePreviewCard
               key={i}
               name={item.name}

@@ -1,7 +1,7 @@
 "use client";
 import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
-import React, { useState, useRef, useEffect, useCallback } from "react";
+import React, { useRef, useEffect, useCallback } from "react";
 import { LuArrowLeft } from "react-icons/lu";
 type Brick = {
   x: number;
@@ -15,7 +15,6 @@ type Brick = {
 };
 export default function Breakoutgame() {
   const canvasRef = useRef<any>(null);
-  const rulesRef = useRef<HTMLDivElement>(null);
 
   // Game state refs
   const scoreRef = useRef(0);
@@ -248,7 +247,7 @@ export default function Breakoutgame() {
       window.removeEventListener("keyup", keyUp);
     };
   }, [brickRowCount, brickColumnCount]);
-  const [score, setScore] = useState(3);
+  // const [score, setScore] = useState(3);
   const router = useRouter();
 
   return (

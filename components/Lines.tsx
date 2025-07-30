@@ -1,7 +1,13 @@
 import { Box } from "@chakra-ui/react";
 import React from "react";
 
-export default function Lines({ top, right, left, bottom }: any) {
+type postionsType = {
+  top?: string;
+  right?: string;
+  left?: string;
+  bottom?: string;
+};
+export default function Lines({ top, right, left, bottom }: postionsType) {
   return (
     <Box
       w="full"

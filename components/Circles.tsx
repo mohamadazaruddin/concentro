@@ -1,6 +1,13 @@
 import { Box } from "@chakra-ui/react";
 
-export default function Circles({ top, right, left, bottom }: any) {
+type postionsType = {
+  top?: string;
+  right?: string;
+  left?: string;
+  bottom?: string;
+};
+
+export default function Circles({ top, right, left, bottom }: postionsType) {
   return (
     <Box
       w={"10px"}
